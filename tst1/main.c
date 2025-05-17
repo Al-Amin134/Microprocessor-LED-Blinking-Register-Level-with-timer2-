@@ -5,15 +5,15 @@
 
 #define TIM2_PSC (*(volatile unsigned int *)(TIM2_BASE + 0x28))
 
-#define TIM2_ARR				*(volatile unsigned int *) (TIM2_BASE + 0x2C)
-#define TIM2_CR1 				*(volatile unsigned int *) (TIM2_BASE + 0x00)
-#define TIM2_SR 				*(volatile unsigned int *) (TIM2_BASE + 0x10)
+#define TIM2_ARR		*(volatile unsigned int *) (TIM2_BASE + 0x2C)
+#define TIM2_CR1 		*(volatile unsigned int *) (TIM2_BASE + 0x00)
+#define TIM2_SR 		*(volatile unsigned int *) (TIM2_BASE + 0x10)
 // Register access macros
-#define RCC_APB2ENR     (*(volatile unsigned int *)(RCC_BASE + 0x18))
-#define GPIOC_CRH       (*(volatile unsigned int *)(GPIOC_BASE + 0x04))
-#define GPIOC_ODR       (*(volatile unsigned int *)(GPIOC_BASE + 0x0C))
-#define GPIOC_BSRR 		  *(volatile unsigned int *) (GPIOC_BASE + 0x10)
-#define RCC_APB1ENR     *(volatile unsigned int *) (RCC_BASE + 0x1c)
+#define RCC_APB2ENR    		 (*(volatile unsigned int *)(RCC_BASE + 0x18))
+#define GPIOC_CRH     		 (*(volatile unsigned int *)(GPIOC_BASE + 0x04))
+#define GPIOC_ODR    		 (*(volatile unsigned int *)(GPIOC_BASE + 0x0C))
+#define GPIOC_BSRR 		 *(volatile unsigned int *) (GPIOC_BASE + 0x10)
+#define RCC_APB1ENR   		 *(volatile unsigned int *) (RCC_BASE + 0x1c)
 
 
 int main()
