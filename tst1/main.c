@@ -3,8 +3,7 @@
 #define DELAY 2000000
 #define TIM2_BASE 0x40000000
 
-#define TIM2_PSC (*(volatile unsigned int *)(TIM2_BASE + 0x28))
-
+#define TIM2_PSC 		(*(volatile unsigned int *)(TIM2_BASE + 0x28))
 #define TIM2_ARR		*(volatile unsigned int *) (TIM2_BASE + 0x2C)
 #define TIM2_CR1 		*(volatile unsigned int *) (TIM2_BASE + 0x00)
 #define TIM2_SR 		*(volatile unsigned int *) (TIM2_BASE + 0x10)
@@ -24,12 +23,11 @@ int main()
 	 GPIOC_CRH |=(1u<<21);
 	 GPIOC_CRH &=~(1u<<22);
 	 GPIOC_CRH &=~(1u<<23);
-	 RCC_APB1ENR |=(1u<<0);
-		TIM2_PSC = 7999;
-	 TIM2_ARR = 999;
-	 
-	 TIM2_CR1|=(1u<<0);
 	
+	 RCC_APB1ENR |=(1u<<0);
+	 TIM2_PSC = 7999;
+	 TIM2_ARR = 999;
+	 TIM2_CR1|=(1u<<0);
 	
 	 while(1)
 	 {
